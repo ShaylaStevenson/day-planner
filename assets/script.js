@@ -1,28 +1,15 @@
 $(document).ready(function() {
 
-    //get id's associated with text input and save to key value pair cooresponding with hour
-    // var hourlyEvents = [{
-    // "nineEvents": $("#nine"),
-    // "tenEvents": $("#ten"),
-    // "elevenEvents": $("#eleven"),
-    // "twelveEvents": $("#twelve"),
-    // "oneEvents": $("#one"),
-    // "twoEvents": $("#two"),
-    // "threeEvents": $("#three"),
-    // "fourEvents": $("#four"),
-    // "fiveEvents": $("#five")
-    // }]
+    //show date in header using Momentjs
+    function getTodaysDate() {
+        var currentDate = moment().format('dddd MMM DD[,] YYYY');
+        $('#currentDay').text(currentDate);
+    }
+    getTodaysDate();
 
-    // var eventsText = JSON.parse(hourlyEvents);
-    
-    //hourlyEvents or eventsText?
-    //$(".saveBtn").on("click", function() {
-    //  for (var = i; i < eventsText; i++) {}
-    // }
-
-
-
-    //GOOD CODE BELOW
+    //will be used to check if hour is in past or future
+    var currentTime = 13;
+    //moment().format("H");
 
     //save text input to variables
     var nineEvents = $("#nine");
@@ -35,7 +22,7 @@ $(document).ready(function() {
     var fourEvents = $("#four");
     var fiveEvents = $("#five");
 
-    //get previously stored events to display in cooresponding row
+    //get previously stored events to display in corresponding row
     nineEvents.append(localStorage.getItem("9"));
     tenEvents.append(localStorage.getItem("10"));
     elevenEvents.append(localStorage.getItem("11"));
@@ -45,35 +32,6 @@ $(document).ready(function() {
     threeEvents.append(localStorage.getItem("3"));
     fourEvents.append(localStorage.getItem("4"));
     fiveEvents.append(localStorage.getItem("5"));
-
-    //set user's input to storage onclick
-    $(".saveBtn").on("click", function() {
-        localStorage.setItem("9", (nineEvents.val()));
-        localStorage.setItem("10", (twoEvents.val()));
-        localStorage.setItem("11", (elevenEvents.val()));
-        localStorage.setItem("12", (twelveEvents.val()));
-        localStorage.setItem("1", (oneEvents.val()));
-        localStorage.setItem("2", (twoEvents.val()));
-        localStorage.setItem("3", (threeEvents.val()));
-        localStorage.setItem("4", (fourEvents.val()));
-        localStorage.setItem("5", (fiveEvents.val()));
-    })
-
-    var hourRowsArray = [];
-    hourRowsArray = $(".row");
-    console.log(hourRowsArray);
-
-
-    //show date in header using Momentjs
-    function getTodaysDate() {
-        var currentDate = moment().format('dddd MMM DD[,] YYYY');
-        $('#currentDay').text(currentDate);
-    }
-    getTodaysDate();
-
-    //will be used to check if hour is in past or future
-    var currentTime = moment().format("H");
-    console.log(currentTime);
 
     //assign classes to past, present, future using the value attribute
     $(".description").each(function() {
@@ -90,23 +48,16 @@ $(document).ready(function() {
         }
     });
 
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    //set user's input to storage onclick
+    $(".saveBtn").on("click", function() {
+        localStorage.setItem("9", (nineEvents.val()));
+        localStorage.setItem("10", (twoEvents.val()));
+        localStorage.setItem("11", (elevenEvents.val()));
+        localStorage.setItem("12", (twelveEvents.val()));
+        localStorage.setItem("1", (oneEvents.val()));
+        localStorage.setItem("2", (twoEvents.val()));
+        localStorage.setItem("3", (threeEvents.val()));
+        localStorage.setItem("4", (fourEvents.val()));
+        localStorage.setItem("5", (fiveEvents.val()));
+    })
 })
