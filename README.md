@@ -1,5 +1,5 @@
 # Work Day Schedule
-Calendar application to help user manage tasks.
+Calendar application to help the user manage tasks.
 
 ![planner demo](assets/images/planner-demo.png)
 
@@ -14,6 +14,7 @@ Calendar application to help user manage tasks.
 * MDN
 * API documentation at JQuery.com
 * stackOverflow
+* Momentjs documents
 
 ## Links
 * URL: https://shaylastevenson.github.io/day-planner/
