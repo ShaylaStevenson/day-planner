@@ -8,8 +8,7 @@ $(document).ready(function() {
     getTodaysDate();
 
     //will be used to check if hour is in past or future
-    var currentTime = 13;
-    //moment().format("H");
+    var currentTime = moment().format("H");
 
     //get previously stored events to display in corresponding row
     $(".row").each(function() {
