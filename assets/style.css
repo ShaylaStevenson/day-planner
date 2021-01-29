@@ -43,9 +43,9 @@ textarea{
 }
 
 .hour {
-  background-color: #ffffff !important;
-  color: #000000 !important;
-  border-top: 1px dashed #000000 !important;
+  background-color: #ffffff;
+  color: #000000;
+  border-top: 1px dashed #000000;
 }
 
 .past {

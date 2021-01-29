@@ -22,13 +22,13 @@ $(document).ready(function() {
         var value = parseInt($(this).attr("id"));
 
         if (value < currentTime) {
-            $(this).children().addClass("past");
+            $(this).find("textarea").addClass("past");
         }
         else if (value == currentTime) {
-            $(this).children().addClass("present");
+            $(this).find("textarea").addClass("present");
         }
         else {
-            $(this).children().addClass("future");
+            $(this).find("textarea").addClass("future");
         }
     });
 
