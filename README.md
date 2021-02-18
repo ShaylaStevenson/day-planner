@@ -31,4 +31,6 @@ Calendar application to help the user manage tasks.
 * URL: https://shaylastevenson.github.io/day-planner/
 * Github repo: https://github.com/ShaylaStevenson/day-planner
 
-
+## Contact Me
+* View my personal portfolio: https://shaylastevenson.github.io/portfolio/
+* Email: shayla.rose.stevenson@gmail.com
